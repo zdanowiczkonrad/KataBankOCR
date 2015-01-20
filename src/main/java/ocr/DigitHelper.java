@@ -7,7 +7,7 @@ package ocr;
  * @author zdanowiczkonrad
  * 
  */
-public class DigitGenerator {
+public class DigitHelper {
 
 	public static final String[] DIGITS = {
 	" _     _  _     _  _  _  _  _ ",
@@ -20,7 +20,7 @@ public class DigitGenerator {
 	 * @return LCD-like formatted number according to KataBankOCR description
 	 */
 	public static String generate(String number) {
-		String result = "\n";
+		String result = "";
 		for(int i = 0; i < 3; i++) {
 			for (char character : number.toCharArray()) {
 				Integer digit = Character.getNumericValue(character);
@@ -29,6 +29,9 @@ public class DigitGenerator {
 			result += "\n";
 		}
 		return result;
-		
+	}
+	
+	public static String $(String number) {
+		return generate(number);
 	}
 }

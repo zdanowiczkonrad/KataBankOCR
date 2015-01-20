@@ -3,15 +3,15 @@ package ocr;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
-public class DigitGeneratorTest {
+public class DigitHelperTest {
 
 	@Test
 	public void shouldWork() throws Exception {
 		// when:
-		String actual = DigitGenerator.generate("1234567890123456789");
+		String actual = DigitHelper.generate("897689614");
 		// then:
 		Assertions.assertThat(actual).isNotEmpty();
-		System.out.println("Test output:"+actual);
+		System.out.println("Test output:\n"+actual);
 	}
 
 }
