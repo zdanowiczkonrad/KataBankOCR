@@ -28,6 +28,8 @@ public class DigitHelper {
 			}
 			result += "\n";
 		}
+		// debug information to see how the digit actually looks
+		System.out.println(result);
 		return result;
 	}
 	
