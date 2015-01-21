@@ -80,4 +80,13 @@ public class ParserTest {
 		assertCorrectParsingFor("00");
 	}
 
+	@Test
+	public void parser_42() throws Exception {
+		assertCorrectParsingFor("42");
+	}
+	
+	@Test
+	public void parser_358() throws Exception {
+		assertCorrectParsingFor("358");
+	}
 }

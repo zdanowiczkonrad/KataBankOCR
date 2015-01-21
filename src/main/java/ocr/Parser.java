@@ -19,7 +19,7 @@ public class Parser {
 			return UNKNOWN;
 		}
 		if (digit.dashes(0)) {
-			return "1";
+			return "1";	
 		}
 		if (digit.dashes(1)) {
 			if (digit.pipes(2))
