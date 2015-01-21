@@ -35,5 +35,10 @@ public class Digit {
 	public static int count(String number, String character) {
 		return number.length() - number.replace(character, "").length();
 	}
+	
+	
+	public String toString() {
+		return number;
+	}
 
 }

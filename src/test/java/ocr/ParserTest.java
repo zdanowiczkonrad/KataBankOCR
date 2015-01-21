@@ -74,5 +74,10 @@ public class ParserTest {
 	public void characterCounter() throws Exception {
 		assertThat(Digit.count("_-_-__", "_")).isEqualTo(4);
 	}
+	
+	@Test
+	public void parser_00() throws Exception {
+		assertCorrectParsingFor("00");
+	}
 
 }

@@ -5,7 +5,16 @@ public class Parser {
 	private static final String UNKNOWN = "?";
 
 	public String parse(String number) {
-		Digit digit = new Digit(number);
+		Digits digits = new Digits(number);
+		String result = "";
+		for (Digit digit : digits.getDigits()) {
+			result += parseOne(digit);
+		}
+
+		return result;
+	}
+
+	private String parseOne(Digit digit) {
 		if (!digit.isValid()) {
 			return UNKNOWN;
 		}
