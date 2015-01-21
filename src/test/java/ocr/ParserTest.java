@@ -35,11 +35,6 @@ public class ParserTest {
 	}
 
 	@Test
-	public void characterCounter() throws Exception {
-		assertThat(Digit.count("_-_-__", "_")).isEqualTo(4);
-	}
-
-	@Test
 	public void parser_4() throws Exception {
 		assertCorrectParsingFor("4");
 	}
@@ -66,4 +61,18 @@ public class ParserTest {
 	public void parser_9() throws Exception {
 		assertCorrectParsingFor("9");
 	}
+	@Test
+	public void parser_unknown() throws Exception {
+		char[] number = $("7").toCharArray();
+		number[6]=' ';
+		System.out.println("wrongly scanned number:");
+		System.out.println((String.valueOf(number)));
+				
+		assertThat(parser.parse(String.valueOf(number))).isEqualTo("?");
+	}
+	@Test
+	public void characterCounter() throws Exception {
+		assertThat(Digit.count("_-_-__", "_")).isEqualTo(4);
+	}
+
 }

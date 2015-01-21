@@ -15,7 +15,7 @@ public class Parser {
 		if (digit.dashes(1)) {
 			if (digit.pipes(2))
 				return "7";
-			else
+			else if (digit.pipes(3))
 				return "4";
 		}
 
